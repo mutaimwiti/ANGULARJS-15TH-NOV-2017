@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <title>Mutai Mwiti</title>
 </head>
-<body>
-    <h1>Simple App</h1>
-    <div ng-app="">
-        <p>What's your Name: <input type="text" ng-model="name"></p>
-        <p>Hello <span ng-bind="name"></span>&nbsp;:)</p> </div>
-    <script src="angular.min.js"> </script>
+    <body>
+        <h1>Simple App</h1>
+        <!--
+            AngularJS uses HTML as the template language. AngularJS adds its own specific elements and attributes.
+            It combines the template with information from the model and controller to render the dynamic view that the
+            user sees on the browser. Example: ng-app="" directive starts an AngularJS Application. </div> marks the
+            end of the application.
+        -->
+        <div ng-app="">
+            <!--
+                ng-model directive creates a "model variable" named name, which can be used with the HTML page and within
+                the div having ng-app directive.
+            -->
+            <p>What's your Name: <input type="text" ng-model="name"></p>
+            <!--
+                ng-bind then uses the name model to be displayed in the HTML <span> tag whenever user enters input in
+                the text box
+            -->
+            <p>Hello <span ng-bind="name"></span>&nbsp;:)</p>
+        </div>
+        <!--
+            Including angularJS library on page
+        -->
+        <script src="angular.min.js"> </script>
     </body>
 </html>
