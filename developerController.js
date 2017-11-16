@@ -1,4 +1,11 @@
-mainApp.controller("developerController", function ($scope) {
+mainApp.controller("developerController", function ($scope, $interval) {
+
+    $scope.clock = new Date().toLocaleTimeString();
+    $interval(function () {
+        //update time every 1 second, using interval service
+        $scope.clock = new Date().toLocaleTimeString();
+    }, 1000);
+
     $scope.developer = {
         firstName: "Mutai",
         lastName: "Mwiti",
@@ -17,3 +24,4 @@ mainApp.controller("developerController", function ($scope) {
         }
     };
 });
+
